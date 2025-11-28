@@ -18,7 +18,7 @@ Player::Player(DungeonViewer& _pDungeonViewer, IDataList<Cell*>* _pResolution) :
 			.pNeighbor = { nullptr },
 			.pos_ = { -1, -1 },
 		});
-	pResolution_->Add(&cells_[PosToIndex({ 1, 1 })]);
+	pResolution_->In(&cells_[PosToIndex({ 1, 1 })]);
 
 	for (int y = 0; y < mapSize_.y; y++)
 	{
@@ -78,7 +78,7 @@ void Player::Step()
 		return;
 	}
 
-	Cell& currentCell{ *pResolution_->GetAndRemove() };
+	Cell& currentCell{ *pResolution_->Out() };
 
 	roadPainter_.Add(currentCell.pos_);
 
@@ -88,7 +88,7 @@ void Player::Step()
 		if (currentCell.pNeighbor[d] && !currentCell.pNeighbor[d]->checked_ && !currentCell.pNeighbor[d]->isWall_)
 		{
 			roadPainter_.Add(currentCell.pNeighbor[d]->pos_, PT_NEXT);
-			pResolution_->Add(currentCell.pNeighbor[d]);  // ->pNeighbor[d]
+			pResolution_->In(currentCell.pNeighbor[d]);  // ->pNeighbor[d]
 		}
 	}
 }

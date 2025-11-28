@@ -10,7 +10,7 @@ public:
 	DataStack() : stack_{} {}
 	~DataStack() {}
 
-	inline T GetAndRemove() override { T element{ stack_.top() }; stack_.pop(); return element; }
+	inline T Out() override { T element{ stack_.top() }; stack_.pop(); return element; }
 
 	inline void Add(const T _element) override { stack_.push(_element); }
 
@@ -26,7 +26,7 @@ public:
 	DataQueue() : queue_{} {}
 	~DataQueue() {}
 
-	inline T GetAndRemove() override { T element{ queue_.front() }; queue_.pop(); return element; }
+	inline T Out() override { T element{ queue_.front() }; queue_.pop(); return element; }
 
 	inline void Add(const T _element) override { queue_.push(_element); }
 
