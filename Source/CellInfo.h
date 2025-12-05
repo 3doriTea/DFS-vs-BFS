@@ -1,4 +1,5 @@
 #pragma once
+//#include 
 
 /// <summary>
 /// セルから見た方向
@@ -19,6 +20,7 @@ struct Cell
 {
 	bool checked_;  // 既にチェックしたセルか
 	bool isWall_;  // セルが壁であるか
+	
 	Cell* pNeighbor[DIRECTION::MAX];  // 隣のセルのポインタ
 	Vec2Int pos_;  // セルの座標
 };

@@ -7,10 +7,13 @@
 class Dungeon
 {
 public:
-	enum struct TileType
+	enum struct TileType : int
 	{
 		None,  // ìπ (Ç»Ç…Ç‡Ç»Çµ)
 		Wall,  // ï«
+		Start,
+		Goal,
+		WeightZero,  // èdÇ›
 	};
 
 public:

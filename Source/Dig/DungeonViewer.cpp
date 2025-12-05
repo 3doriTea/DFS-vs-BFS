@@ -26,6 +26,13 @@ void DungeonViewer::View()
 				DrawBox(x * WALL_SIZE, y * WALL_SIZE, (x + 1) * WALL_SIZE, (y + 1) * WALL_SIZE, 0x00ff00, TRUE);
 				break;
 			case Dungeon::TileType::None:
+				break;  // ‰½‚à‚È‚¢‚È‚ç“¹
+			case Dungeon::TileType::Start:
+				DrawBox(x * WALL_SIZE, y * WALL_SIZE, (x + 1) * WALL_SIZE, (y + 1) * WALL_SIZE, 0xff0000, TRUE);
+				break;
+			case Dungeon::TileType::Goal:
+				DrawBox(x * WALL_SIZE, y * WALL_SIZE, (x + 1) * WALL_SIZE, (y + 1) * WALL_SIZE, 0xffff00, TRUE);
+				break;
 			default:
 				break;
 			}

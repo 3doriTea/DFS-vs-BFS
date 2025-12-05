@@ -56,6 +56,7 @@
     <ClCompile Include="Source\Dig\Randomer.cpp" />
     <ClCompile Include="Source\Player.cpp" />
     <ClCompile Include="Source\RoadPainter.cpp" />
+    <ClCompile Include="Source\MapLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -130,6 +131,7 @@
     <ClInclude Include="Source\IDataList.h" />
     <ClInclude Include="Source\StackAndQueue.h" />
     <ClInclude Include="Source\CellInfo.h" />
+    <ClInclude Include="Source\MapLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">

@@ -125,4 +125,7 @@ void DiggingDungeon::Generate()
 			}
 		}
 	}
+
+	SetTile(TileType::Start, 1, 1);
+	SetTile(TileType::Goal, GetWidth() - 2, GetHeight() - 2);
 }

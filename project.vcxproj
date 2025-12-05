@@ -160,6 +160,7 @@
     <ClInclude Include="Source\Dig\Dungeon.h" />
     <ClInclude Include="Source\Dig\DungeonViewer.h" />
     <ClInclude Include="Source\Dig\Randomer.h" />
+    <ClInclude Include="Source\MapLoader.h" />
     <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\RoadPainter.h" />
     <ClInclude Include="Source\Screen.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="Source\Dig\Dungeon.cpp" />
     <ClCompile Include="Source\Dig\DungeonViewer.cpp" />
     <ClCompile Include="Source\Dig\Randomer.cpp" />
+    <ClCompile Include="Source\MapLoader.cpp" />
     <ClCompile Include="Source\Player.cpp" />
     <ClCompile Include="Source\PlayScene.cpp" />
     <ClCompile Include="Source\RoadPainter.cpp" />
