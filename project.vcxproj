@@ -155,6 +155,7 @@
     <ClInclude Include="Library\Time.h" />
     <ClInclude Include="Source\BootScene.h" />
     <ClInclude Include="Source\CellInfo.h" />
+    <ClInclude Include="Source\Dig\MapLoadDungeon.h" />
     <ClInclude Include="Source\IDataList.h" />
     <ClInclude Include="Source\Dig\DiggingDungeon.h" />
     <ClInclude Include="Source\Dig\Dungeon.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="Source\Dig\DiggingDungeon.cpp" />
     <ClCompile Include="Source\Dig\Dungeon.cpp" />
     <ClCompile Include="Source\Dig\DungeonViewer.cpp" />
+    <ClCompile Include="Source\Dig\MapLoadDungeon.cpp" />
     <ClCompile Include="Source\Dig\Randomer.cpp" />
     <ClCompile Include="Source\MapLoader.cpp" />
     <ClCompile Include="Source\Player.cpp" />

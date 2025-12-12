@@ -57,6 +57,7 @@
     <ClCompile Include="Source\Player.cpp" />
     <ClCompile Include="Source\RoadPainter.cpp" />
     <ClCompile Include="Source\MapLoader.cpp" />
+    <ClCompile Include="Source\Dig\MapLoadDungeon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -132,6 +133,7 @@
     <ClInclude Include="Source\StackAndQueue.h" />
     <ClInclude Include="Source\CellInfo.h" />
     <ClInclude Include="Source\MapLoader.h" />
+    <ClInclude Include="Source\Dig\MapLoadDungeon.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">

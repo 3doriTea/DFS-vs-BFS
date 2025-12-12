@@ -20,6 +20,7 @@ bool MapLoader::TryLoad(fs::path _file)
 	std::ifstream ifs{ _file };
 	if (!ifs)
 	{
+		assert(false && "ファイルが開けない");
 		return false;
 	}
 
@@ -27,6 +28,7 @@ bool MapLoader::TryLoad(fs::path _file)
 
 	if (!std::getline(ifs, line))
 	{
+		assert(false && "最初の行の取得に失敗");
 		return false;
 	}
 
@@ -64,7 +66,7 @@ bool MapLoader::TryLoad(fs::path _file)
 	}
 }
 
-char MapLoader::TileChar(const int _x, const int _y)
+char MapLoader::TileChar(const int _x, const int _y) const
 {
 	int index{ _y * width_ + _x };
 

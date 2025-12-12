@@ -2,6 +2,7 @@
 #include "../Library/SceneBase.h"
 #include "Dig/DiggingDungeon.h"
 #include "Dig/DungeonViewer.h"
+#include "Dig/MapLoadDungeon.h"
 #include "IDataList.h"
 #include "CellInfo.h"
 
@@ -13,6 +14,14 @@ class Player;
 /// </summary>
 class PlayScene : public SceneBase
 {
+private:
+	enum SEARCH_TYPE : int
+	{
+		ST_BFS,
+		ST_DFS,
+		ST_MAX,
+	};
+
 public:
 	PlayScene();
 	~PlayScene();
@@ -20,8 +29,10 @@ public:
 	void Draw() override;
 
 private:
-	DiggingDungeon diggingDungeon_;
-	DungeonViewer viewer_;
+	//DiggingDungeon dungeon_;
+	MapLoader mapLoader_;
+	Dungeon* pDungeon_;
+	DungeonViewer* pViewer_;
 	float timeLeft_;
 	Player* pPlayer_;
 	IDataList<Cell*>* pCellData_;
