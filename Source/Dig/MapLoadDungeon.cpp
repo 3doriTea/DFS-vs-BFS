@@ -33,7 +33,14 @@ void MapLoadDungeon::Generate()
 				SetTile(Dungeon::TileType::Goal, x, y);
 				break;
 			default:
-				assert(false && "未定義のマップタイル文字");
+				assert('0' <= c && c <= '9' && "範囲外文字列");
+				int typeNumber = c - '0' + static_cast<int>(Dungeon::TileType::_0);
+
+				SetTile(static_cast<Dungeon::TileType>(typeNumber), x, y);
+
+
+
+				//assert(false && "未定義のマップタイル文字");
 				break;
 			}
 		}

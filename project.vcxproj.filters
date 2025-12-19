@@ -58,6 +58,7 @@
     <ClCompile Include="Source\RoadPainter.cpp" />
     <ClCompile Include="Source\MapLoader.cpp" />
     <ClCompile Include="Source\Dig\MapLoadDungeon.cpp" />
+    <ClCompile Include="Source\DijkstraPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -134,6 +135,7 @@
     <ClInclude Include="Source\CellInfo.h" />
     <ClInclude Include="Source\MapLoader.h" />
     <ClInclude Include="Source\Dig\MapLoadDungeon.h" />
+    <ClInclude Include="Source\DijkstraPlayer.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Library">

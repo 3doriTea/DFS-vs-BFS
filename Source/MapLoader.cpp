@@ -70,7 +70,7 @@ char MapLoader::TileChar(const int _x, const int _y) const
 {
 	int index{ _y * width_ + _x };
 
-	assert(index < 0 || tiles_.size() <= index
+	assert(0 <= index && index < tiles_.size()
 		&& "範囲外アクセス発生");
 
 	return tiles_.at(index);

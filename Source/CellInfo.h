@@ -20,6 +20,7 @@ struct Cell
 {
 	bool checked_;  // 既にチェックしたセルか
 	bool isWall_;  // セルが壁であるか
+	int cost_{};  // セルへ移動するコスト
 	
 	Cell* pNeighbor[DIRECTION::MAX];  // 隣のセルのポインタ
 	Vec2Int pos_;  // セルの座標

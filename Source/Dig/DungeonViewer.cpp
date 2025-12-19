@@ -1,5 +1,6 @@
 #include "DungeonViewer.h"
 #include <iostream>
+#include <cassert>
 #include "Dungeon.h"
 #include "DxLib.h"
 
@@ -44,6 +45,19 @@ void DungeonViewer::View()
 bool DungeonViewer::IsWall(const int _x, const int _y)
 {
 	return dungeon_.GetTile(_x, _y) == Dungeon::TileType::Wall;
+}
+
+int DungeonViewer::GetCost(const int _x, const int _y)
+{
+	int cost{ static_cast<int>(dungeon_.GetTile(_x, _y)) - static_cast<int>(Dungeon::TileType::_0) };
+	
+	if (cost < 0)
+	{
+		cost = INT_MAX;
+	}
+	//assert(cost >= 0 && "指定したタイルが床ではないためコスト計算できない");
+	
+	return cost;
 }
 
 Vec2Int DungeonViewer::GetSize() const
